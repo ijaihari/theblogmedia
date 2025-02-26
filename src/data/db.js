@@ -1,4 +1,4 @@
-export const Blogs = [
+export const AllBlogs = [
     {
         "id": 1,
         "title": "Meta debuts generative AI features for advertisers",
