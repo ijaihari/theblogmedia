@@ -1,1 +1,1 @@
-# React + Vite
+TheBlog Media
