@@ -59,6 +59,7 @@ a {
         }
 
         cursor: pointer;
+        background-color: white;
         padding: 2px 15px 4px 15px;
         border: none;
         border-radius: 35px;
@@ -77,47 +78,51 @@ a {
     }
 
 }
-.introsection{
 
-}
 .intro {
     height: 60vh;
     background-color: #F5F5F7;
     padding: 50px 150px;
     position: relative;
 }
-.intro-idea{
+
+.intro-idea {
     font-weight: bold;
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-.intro-about{
+
+.intro-about {
     color: #6E6E73;
     font-weight: 500;
     font-size: 1.2rem;
 }
-.blog-read{
+
+.blog-read {
     position: absolute;
-    bottom: 60px;
+    bottom: 70px;
     font-size: 1.2rem;
     background-color: royalblue;
+    box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.4);
     font-weight: 500;
     border: none;
-    padding: 5px 20px 7px 20px;
-    border-radius: 20px;
+    padding: 5px 20px 8px 20px;
+    border-radius: 15px;
     color: white;
     cursor: pointer;
-    &:hover{
-        box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.4);
-    }
-    i{
+
+    i {
         margin-left: 5px;
-        color:white;
-        
+        color: white;
     }
 }
-.scroll-down{
+
+.scroll-down {
     position: absolute;
     bottom: 60px;
     right: 150px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #6E6E73;
 }
