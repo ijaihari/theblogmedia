@@ -81,7 +81,7 @@ a {
 
 .intro {
     height: 60vh;
-    background-color: #F5F5F7;
+    background-color: white;
     padding: 50px 150px;
     position: relative;
 }
@@ -89,7 +89,7 @@ a {
 .intro-idea {
     font-weight: bold;
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
 }
 
 .intro-about {
@@ -125,4 +125,26 @@ a {
     border: none;
     font-size: 1.2rem;
     color: #6E6E73;
+}
+
+//write
+
+label {
+    display: inline-block;
+    width: 80px;
+}
+
+input {
+    width: 270px;
+}
+
+textarea {
+    width: 350px;
+    height: 300px;
+    resize: none;
+}
+
+.write{
+    display: flex;
+    justify-content: center;
 }
