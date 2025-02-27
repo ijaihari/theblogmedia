@@ -6,7 +6,7 @@ import Blogs from './components/Blogs';
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       <Header />
       <Routes>
         <Route path='/' element={<Intro />} />
