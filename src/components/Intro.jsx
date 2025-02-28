@@ -10,6 +10,7 @@ function Intro() {
                 <button className="blog-read" onClick={() => navigate('/blogs')}>Start Reading <i class="fa-solid fa-circle-arrow-right"></i></button>{/* 
             <button className="scroll-down">Scroll down <i class="fa-solid fa-arrow-down"></i></button> */}
             </section>
+
             <hr />
             <section className="intro-samples">
                 <section>
