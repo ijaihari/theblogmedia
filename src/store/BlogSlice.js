@@ -1,14 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
-const initialState = [];
+import { blogs } from "../data/blog";
+const initialState = {
+   blogs,
+}
+
 const BlogReducer = createSlice({
-    name: 'blogs',
+    name: 'blog',
     initialState,
+
     reducers: {
         addBlog: (state, action) => {
-            console.log(action.payload);
-            state.push(action.payload)
+            state.blogs.push(action.payload);
             return state
-            
         }
     }
 });
