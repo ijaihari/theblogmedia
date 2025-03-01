@@ -1,6 +1,28 @@
 import { useNavigate } from "react-router-dom";
+import { blogs } from "../data/blog";
+
 function Intro() {
     const navigate = useNavigate()
+    const getTrendingAndRecentBlogs = (blogs) => {
+        // Sort blogs by date in descending order (most recent first)
+        const sortedBlogs = [...blogs].sort((a, b) => new Date(b.date) - new Date(a.date));
+        console.log(sortedBlogs);
+        // Get 5 most recent blogs
+        const recentBlogs = sortedBlogs.slice(0, 3);
+
+        // Shuffle and get 4 random trending blogs
+        const trendingBlogs = [...blogs]
+            .sort(() => 0.5 - Math.random()) // Shuffle array randomly
+            .slice(0, 4); // Pick first 4 after shuffle
+
+        return { trendingBlogs, recentBlogs };
+    };
+
+    // Usage
+    const { trendingBlogs, recentBlogs } = getTrendingAndRecentBlogs(blogs);
+    /* console.log("Trending Blogs:", trendingBlogs);
+    console.log("Recent Blogs:", recentBlogs); */
+
     return (
 
         <div className="introsection">
@@ -15,27 +37,30 @@ function Intro() {
                 <section className="trend-blog">
                     <h1 className="trend-t title">Trending Blog</h1>
                     <section className="trends">
-                        <section className="trend-block">
-                           <p className="trendtag">tag</p>
+                        {
+                            trendingBlogs.map((tblog, index) =>
+                                <section className="trend-block" key={index}>
+                                    <p className="trendtag">{tblog.tag}</p>
+                                    <button onClick={() => navigate(`/blogs/${tblog.id}`)} className="openext"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                                    <h2 className="trend-title">{tblog.title}</h2>
+                                </section>)
+                        }
+                        {/* <section className="trend-block">
+                           <p className="trendtag"></p>
                            <button className="openext"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
                            <h2 className="trend-title">Sustainable Living: How Small Changes Make a Big Impact</h2>
-                        </section>
-                        <section className="trend-block">
-
-                        </section>
-                        <section className="trend-block">
-
-                        </section>
-                        <section className="trend-block">
-
-                        </section>
+                        </section> */}
                     </section>
                 </section>
                 <section className="recent-blog">
-                    <h1 className="recent-t title">Recent Blogs</h1>
-                    <section className="recent-block">
-                        <h3>Title</h3>
-                        <p>Category </p>
+                    <section className="re-blog">
+                        <h1 className="recent-t title">Recent Blogs</h1> <hr />
+                        {
+                            recentBlogs.map((rblog, index) => <section key={index} className="recent-block">
+                                <button onClick={()=> navigate(`/blogs/${rblog.id}`)}>{rblog.title}</button>
+                                <p># {rblog.tag}</p>
+                            </section>)
+                        }
                     </section>
                     <section className="sub-news">
                         <h2>Subscribe to Newsletter</h2>
@@ -43,6 +68,7 @@ function Intro() {
                         <button>Subscribe</button>
                     </section>
                 </section>
+
             </section>
         </div>
     );

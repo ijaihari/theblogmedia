@@ -26,8 +26,7 @@ function SingleBlog() {
                 </button>
                 <h1 className="bs-title">{SelectedBlog.title}</h1>
                 <p className="pub-date bs-date">
-                    Published on: {SelectedBlog.date} 
-                    <span className="tag"> {`#${SelectedBlog.tag}`}</span>
+                    Published on: {SelectedBlog.date} <span className="tag"> {`#${SelectedBlog.tag}`}</span>
                 </p>
                 <p className="bs-content">{SelectedBlog.content}</p>
                 <button className="backto" onClick={() => navigate('/blogs')}>

@@ -6,6 +6,7 @@ import Blogs from './components/Blogs';
 import Write from './components/Write';
 import SingleBlog from './components/SingleBlog';
 import Edit from './components/Edit';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/blogs/edit/:blogId' element={<Edit/>} />
         <Route path='/write' element={<Write/>} />
       </Routes>
+      <Footer/>
 
     </div>
   );
