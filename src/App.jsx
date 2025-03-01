@@ -7,6 +7,7 @@ import Write from './components/Write';
 import SingleBlog from './components/SingleBlog';
 import Edit from './components/Edit';
 import Footer from './components/Footer';
+import Community from './components/Community';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/blogs/:blogId' element={<SingleBlog/>} />
         <Route path='/blogs/edit/:blogId' element={<Edit/>} />
         <Route path='/write' element={<Write/>} />
+        <Route path='/community' element={<Community/>} />
       </Routes>
       <Footer/>
 

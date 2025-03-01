@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 function Header() {
     const navigate = useNavigate()
     return (
-        <>
+        <div className="fixed">
             <header className="header">
                 <nav className="navbar">
                     <h1 className="logo"><Link to="/">TheBlog Media</Link></h1>
@@ -19,7 +19,7 @@ function Header() {
                     </section>
                 </nav>
             </header>
-        </>
+        </div>
     );
 }
 
