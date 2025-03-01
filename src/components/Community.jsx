@@ -3,7 +3,7 @@ function Community() {
         <div className="community">
             <div className="guidelines">
                 <h2> Welcome to TheBlog Media! </h2>
-                <h4>To ensure a respectful and engaging community, we ask all users to follow these guidelines:</h4>
+                <p>To ensure a respectful and engaging community, we ask all users to follow these guidelines</p>
                 <br />
                 <section>
                     <ul>

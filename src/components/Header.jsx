@@ -14,8 +14,8 @@ function Header() {
                         <li><Link to="/community">Community</Link></li>
                     </ul>
                     <section className="in-out">
-                        <button onClick={() => { navigate('/signin') }}>Sign in</button>
-                        <button onClick={() => { navigate('/signout') }}>Sign up</button>
+                        <button onClick={() => { navigate('/signin') }}>Sign in <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                        <button onClick={() => { navigate('/signout') }}>Sign up <i class="fa-solid fa-user-plus"></i></button>
                     </section>
                 </nav>
             </header>
