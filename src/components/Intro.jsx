@@ -11,13 +11,37 @@ function Intro() {
             <button className="scroll-down">Scroll down <i class="fa-solid fa-arrow-down"></i></button> */}
             </section>
 
-            <hr />
             <section className="intro-samples">
-                <section>
-                    <h1>Trending Blog</h1>
+                <section className="trend-blog">
+                    <h1 className="trend-t title">Trending Blog</h1>
+                    <section className="trends">
+                        <section className="trend-block">
+                           <p className="trendtag">tag</p>
+                           <button className="openext"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                           <h2 className="trend-title">Sustainable Living: How Small Changes Make a Big Impact</h2>
+                        </section>
+                        <section className="trend-block">
+
+                        </section>
+                        <section className="trend-block">
+
+                        </section>
+                        <section className="trend-block">
+
+                        </section>
+                    </section>
                 </section>
-                <section>
-                    <h2>Recent Blogs</h2>
+                <section className="recent-blog">
+                    <h1 className="recent-t title">Recent Blogs</h1>
+                    <section className="recent-block">
+                        <h3>Title</h3>
+                        <p>Category </p>
+                    </section>
+                    <section className="sub-news">
+                        <h2>Subscribe to Newsletter</h2>
+                        <input type="text" name="subscribe" id="subscribe" placeholder="example@email.com" /><br />
+                        <button>Subscribe</button>
+                    </section>
                 </section>
             </section>
         </div>
