@@ -13,10 +13,10 @@ function Header() {
                         <li><Link to="/write">Write</Link></li>
                         <li><Link to="/community">Community</Link></li>
                     </ul>
-                    <section className="in-out">
+                    {/* <section className="in-out">
                         <button onClick={() => { navigate('/signin') }}>Sign in <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
                         <button onClick={() => { navigate('/signout') }}>Sign up <i class="fa-solid fa-user-plus"></i></button>
-                    </section>
+                    </section> */}
                 </nav>
             </header>
         </div>
