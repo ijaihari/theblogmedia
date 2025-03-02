@@ -39,17 +39,19 @@ function Write() {
         setContent("");
         setCategory("");
     }
-
+function handlesubmitBlog(){
+   
+}
     return (
-        <div>
-            <h1>Write a New Blog</h1>
+        <div className="write-container">
+            <h1 className="write-blog">Write a new blog</h1>
             <section className="write">
                 <form className="form" onSubmit={handleSubmit}>
                     <label htmlFor="title">Title </label><br />
                     <input
                         type="text"
                         id="title"
-                        className="title"
+                        className="w-title" placeholder="Type blog title"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
@@ -59,8 +61,8 @@ function Write() {
                     <input
                         type="text"
                         id="summary"
-                        className="summary"
-                        value={summary}
+                        className="w-summary"
+                        value={summary} placeholder="Type blog summary"
                         onChange={(e) => setSummary(e.target.value)}
                         required
                     /><br />
@@ -90,12 +92,12 @@ function Write() {
                     <textarea
                         name="content"
                         id="content"
-                        value={content}
+                        value={content} placeholder="Type your blog content"
                         onChange={(e) => setContent(e.target.value)}
                         required
                     ></textarea><br />
 
-                    <button type="submit">Submit Blog</button>
+                    <button type="submit" onClick={()=>{handlesubmitBlog}}>Submit Blog</button>
                 </form>
             </section>
         </div>

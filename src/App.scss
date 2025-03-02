@@ -100,7 +100,7 @@ body {
     font-size: 3rem;
     margin-top: 40px;
     margin-bottom: 17px;
-   /*  background: linear-gradient(145deg, #082974, #3f3d3d);
+    /*  background: linear-gradient(145deg, #082974, #3f3d3d);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent; */
@@ -124,9 +124,11 @@ body {
     border-radius: 25px;
     color: black;
     cursor: pointer;
-     i{
+
+    i {
         margin-left: 4px;
-     }
+    }
+
     &:hover {
         background: black;
         color: white;
@@ -417,7 +419,7 @@ body {
 .active-category {
     border: 1px solid rgb(5, 5, 61);
     color: rgb(5, 5, 61);
-    background-color:rgba(5, 5, 61, 0.1);
+    background-color: rgba(5, 5, 61, 0.1);
 }
 
 .blog-block {
@@ -555,26 +557,95 @@ body {
 }
 
 //write
+.write-container{
+    h1{
+        text-align: center;
+    }
+}
+.form {
+    h1{
+        text-align: center;
+    }
+    label {
+        display: inline-block;
+        width: 80px;
+        margin-bottom: 2px;font-size: 1.2rem;
+        font-weight: 500;
+    }
 
-label {
-    display: inline-block;
-    width: 80px;
+
+    input {
+        width: 100%;
+        padding: 5px 5px 7px;
+        border: 1px solid black;
+        border-radius: 5px;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+
+        &:focus {
+            border-color: black;
+        }
+    }
+
+    textarea {
+        width: 550px;
+        height: 300px;
+        resize: none;
+        outline: none;
+        padding: 7px 9px 7px;
+        border: 1px solid black;
+        color: black;
+        border-radius: 5px;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+
+    //select
+
+    select {
+        width: 100%;
+        padding: 5px 5px 7px;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: black;
+        cursor: pointer;
+        outline: none;
+           
+        option {
+            font-size: 1rem;
+            background-color: #fff;
+            color:black;
+            padding: 1px;
+        }
+    }
+    button{
+        width: 100%;
+        padding: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 5px;
+        background-color: white;
+        border: 1px solid black;
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+    }
+    
 }
 
-input {
-    width: 270px;
-}
-
-textarea {
-    width: 350px;
-    height: 300px;
-    resize: none;
-}
 
 .write {
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 82.2vh;
+    max-height: fit-content;
 }
 
 footer {
@@ -638,8 +709,9 @@ footer {
         color: black;
     }
 }
-.word{
+
+.word {
     font-family: 'Chomsky', sans-serif;
-      font-weight: 500;  
-      font-size: 4rem;                                        
+    font-weight: 500;
+    font-size: 4rem;
 }
