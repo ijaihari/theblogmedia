@@ -6,7 +6,8 @@ function Header() {
         <div className="fixed">
             <header className="header">
                 <nav className="navbar">
-                    <img className="logo" src='' alt="" />{/* 
+                   <img className="logo" src="src\assets\theblogmedia.svg" alt="" />
+                   {/* 
                     <h1 className="logo"><Link to="/">TheBlog Media</Link></h1> */}
                     <ul className="navtabs">
                         <li><Link to="/">Home</Link></li>
@@ -14,10 +15,10 @@ function Header() {
                         <li><Link to="/write">Write</Link></li>
                         <li><Link to="/community">Community</Link></li>
                     </ul>
-                    {/* <section className="in-out">
+                     <section className="in-out">
                         <button onClick={() => { navigate('/signin') }}>Sign in <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
                         <button onClick={() => { navigate('/signout') }}>Sign up <i class="fa-solid fa-user-plus"></i></button>
-                    </section> */}
+                    </section> 
                 </nav>
             </header>
         </div>

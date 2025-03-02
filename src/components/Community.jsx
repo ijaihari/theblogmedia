@@ -2,7 +2,7 @@ function Community() {
     return (
         <div className="community">
             <div className="guidelines">
-                <h2> Welcome to TheBlog Media! </h2>
+                <h2> Welcome to <span className="word">TheBlog Media !</span> </h2>
                 <p>To ensure a respectful and engaging community, we ask all users to follow these guidelines</p>
                 <br />
                 <section>
@@ -18,10 +18,6 @@ function Community() {
                     </ul>
                    
                 </section>
-                <section>
-                <article></article>
-                </section>
-
             </div>
         </div>
     );
