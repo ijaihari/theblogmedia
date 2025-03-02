@@ -23,17 +23,17 @@ body {
 .fixed {
     position: sticky;
     top: 0px;
-    height: fit-content;
     z-index: 99;
     width: 100%;
 }
 
 .header {
     background-image: linear-gradient(145deg, rgb(3, 3, 58), #302e2e);
-    color: white;
 }
 
 .logo {
+    
+    /* 
     font-size: 2.7rem;
     margin-left: 150px;
 
@@ -41,36 +41,18 @@ body {
         font-family: 'Chomsky', sans-serif;
         font-weight: 300;
         color: white;
-    }
+    } */
 }
 
 .navbar {
     display: flex;
-    gap: 10px;
     justify-content: space-between;
-    margin-right: 150px;
+    align-content: center;
 
-    &__tabs {
-        display: flex;
-        justify-content: space-around;
-        gap: 10px;
-        align-items: center;
-        list-style: none;
-
-        a {
-            font-weight: bold;
-            padding: 2px 15px 7px 15px;
-            border-radius: 20px;
-            color: white;
-
-            &:hover {
-                background-color: white;
-                color: black;
-            }
-        }
-    }
 }
-
+.navtabs{
+          display: none;
+}
 
 //intro
 
