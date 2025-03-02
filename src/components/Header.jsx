@@ -6,11 +6,11 @@ function Header() {
         <div className="fixed">
             <header className="header">
                 <nav className="navbar">
-                   <img className="logo" src="src\assets\theblogmedia.svg" alt="" />
-                   {/* 
-                    <h1 className="logo"><Link to="/">TheBlog Media</Link></h1> */}
+                 {/*   <img className="logo" src="/src/assets/theblogmedia.svg" alt="" /> */}
+                   
+                    <h1 className="word-logo"><Link to="/theblogmedia">TheBlog Media</Link></h1>
                     <ul className="navtabs">
-                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/theblogmedia">Home</Link></li>
                         <li><Link to="/blogs">Blogs</Link></li>
                         <li><Link to="/write">Write</Link></li>
                         <li><Link to="/community">Community</Link></li>

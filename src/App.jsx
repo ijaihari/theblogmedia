@@ -14,7 +14,7 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path='/' element={<Intro />} />
+        <Route path='/theblogmedia' element={<Intro />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/blogs/:blogId' element={<SingleBlog/>} />
         <Route path='/blogs/edit/:blogId' element={<Edit/>} />
