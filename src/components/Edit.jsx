@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { editBlog } from "../store/BlogSlice";
 
-const EditBlog = () => {
-    const { id } = useParams();
+const Edit = () => {
+    const { blogId } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const blogs = useSelector((state) => state.blog.blogs);
-    const blogToEdit = blogs.find((blog) => blog.id === Number(id));
+    const blogToEdit = blogs.find((blog) => blog.id === Number(blogId));
 
     const [formData, setFormData] = useState({
         title: "",
@@ -28,42 +28,47 @@ const EditBlog = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(editBlog({ id: parseInt(id), updatedBlog: formData }));
-        navigate("/");  // Redirect to blog list
+        dispatch(editBlog({ id: parseInt(blogId), updatedBlog: formData }));
+        navigate(`/blogs/${blogId}`);  // Redirect to blog list
     };
 
     if (!blogToEdit) return <h2>Blog not found!</h2>;
 
     return (
         <div className="edit-blog-container">
-            <h2>Edit Blog</h2>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="title"
-                    value={formData.title}
-                    onChange={handleChange}
-                    placeholder="Blog Title"
-                    required
-                />
-                <textarea
-                    name="summary"
-                    value={formData.summary}
-                    onChange={handleChange}
-                    placeholder="Blog Summary"
-                    required
-                />
-                <textarea
-                    name="content"
-                    value={formData.content}
-                    onChange={handleChange}
-                    placeholder="Blog Content"
-                    required
-                />
-                <button type="submit">Update Blog</button>
-            </form>
+            <h1>Edit Blog</h1>
+            <section className="edit-container">
+                <form className="edit-form" onSubmit={handleSubmit}>
+                    <label htmlFor="title">Title </label><br />
+                    <input
+                        type="text"
+                        name="title"
+                        value={formData.title}
+                        onChange={handleChange}
+                        placeholder="Blog Title"
+                        required
+                    /> <br />
+                    <label htmlFor="summary">Summary</label><br />
+
+                    <input
+                        name="summary"
+                        value={formData.summary}
+                        onChange={handleChange}
+                        placeholder="Blog Summary"
+                        required
+                    /> <br /> <label htmlFor="summary">Content</label><br />
+                    <textarea
+                        name="content"
+                        value={formData.content}
+                        onChange={handleChange}
+                        placeholder="Blog Content"
+                        required
+                    /> <br />
+                    <button type="submit">Update Blog</button>
+                </form>
+            </section>
         </div>
     );
 };
 
-export default EditBlog;
+export default Edit;

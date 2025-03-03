@@ -5,9 +5,7 @@ function Header() {
     return (
         <div className="fixed">
             <header className="header">
-                <nav className="navbar">
-                 {/*   <img className="logo" src="/src/assets/theblogmedia.svg" alt="" /> */}
-                   
+                <nav className="navbar">                   
                     <h1 className="word-logo"><Link to="/theblogmedia">TheBlog Media</Link></h1>
                     <ul className="navtabs">
                         <li><Link to="/theblogmedia">Home</Link></li>

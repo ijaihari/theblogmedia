@@ -560,7 +560,8 @@ body {
     }
 }
 
-.form {
+.form,
+.edit-form {
     h1 {
         text-align: center;
     }
@@ -669,6 +670,21 @@ footer {
     }
 }
 
+//edit 
+.edit-blog-container {
+    min-height:87.5vh ;
+    h1{
+        text-align: center;
+    }
+}
+
+.edit-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+//community
 .community {
     min-height: 81.8vh;
     margin: 20px 150px;
