@@ -31,17 +31,16 @@ body {
     background-image: linear-gradient(145deg, rgb(3, 3, 58), #302e2e);
 }
 
-.logo {
-    width: 200px;
+
+.word-logo {
+    a {
+        color: white;
+        font-family: 'Chomsky', sans-serif;
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
 }
-.word-logo{
-   a{
-    color: white;
-    font-family: 'Chomsky', sans-serif;
-    font-size: 2.3rem;
-    font-weight: 500;
-   }
-}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -52,7 +51,6 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding-right: 150px;
 
     a {
         color: white;
@@ -92,6 +90,9 @@ body {
 
     }
 }
+
+//media query for intro
+
 
 //intro
 
@@ -142,15 +143,6 @@ body {
     }
 }
 
-.scroll-down {
-    position: absolute;
-    bottom: 60px;
-    right: 150px;
-    background-color: transparent;
-    border: none;
-    font-size: 1.2rem;
-    color: #6E6E73;
-}
 
 .intro-samples {
     display: flex;
@@ -161,12 +153,10 @@ body {
 }
 
 .trend-blog {
-    flex-basis: 800px;
     background-color: white;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.2);
-    height: 500px;
 }
 
 .trends {
@@ -564,19 +554,22 @@ body {
 }
 
 //write
-.write-container{
-    h1{
+.write-container {
+    h1 {
         text-align: center;
     }
 }
+
 .form {
-    h1{
+    h1 {
         text-align: center;
     }
+
     label {
         display: inline-block;
         width: 80px;
-        margin-bottom: 2px;font-size: 1.2rem;
+        margin-bottom: 2px;
+        font-size: 1.2rem;
         font-weight: 500;
     }
 
@@ -623,15 +616,16 @@ body {
         color: black;
         cursor: pointer;
         outline: none;
-           
+
         option {
             font-size: 1rem;
             background-color: #fff;
-            color:black;
+            color: black;
             padding: 1px;
         }
     }
-    button{
+
+    button {
         width: 100%;
         padding: 2px;
         font-size: 1rem;
@@ -639,12 +633,13 @@ body {
         border-radius: 5px;
         background-color: white;
         border: 1px solid black;
-        &:hover{
+
+        &:hover {
             background-color: black;
             color: white;
         }
     }
-    
+
 }
 
 
@@ -721,4 +716,117 @@ footer {
     font-family: 'Chomsky', sans-serif;
     font-weight: 500;
     font-size: 4rem;
+}
+
+
+// Media Queries
+
+// Small devices (phones, 600px and down)
+
+// Medium devices (tablets, 600px - 1024px)
+@media (min-width: 601px) and (max-width: 1024px) {}
+
+// Large devices (desktops, 1024px - 1440px)
+@media (min-width: 1024px) and (max-width: 1430px) {
+
+    //header
+    .word-logo {
+        a {
+            font-size: 1.7rem;
+        }
+    }
+
+    .navtabs,
+    .in-out {
+        font-size: .9rem;
+    }
+
+    .intro {
+        height: 50vh;
+        padding: 20px 40px;
+    }
+
+    .intro-idea {
+        font-size: 2rem;
+    }
+
+    .intro-about {
+        font-size: 1rem;
+    }
+
+    .blog-read {
+        bottom: 40px;
+        font-size: 1rem;
+    }
+
+    .intro-samples {
+        flex-direction: column;
+        padding: 20px 50px;
+    }
+
+    .trend-block {
+        width: 430px;
+
+    }
+
+    .recent-blog {
+        display: flex;
+        gap: 10px;
+
+        .re-blog {
+            width: 550px;
+        }
+
+        .sub-news {
+            width: 400px;
+            margin-top: 0px;
+            height: fit-content;
+        }
+    }
+
+    //blog
+    .blog-container {
+        padding: 20px 50px;
+    }
+
+    .b-title {
+        font-size: 1.5rem;
+    }
+
+    .pub-date {
+
+        font-size: .7rem;
+
+    }
+
+    .b-summary {
+        font-size: .9rem;
+    }
+
+    .cattag-btn,
+    .active-category {
+        font-size: .9rem;
+    }
+
+    .opento {
+        padding: 3px 10px 4px 10px;
+        font-size: .7rem;
+    }
+
+    //single blog
+
+    .bs-title {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .bs-date {
+        margin-top: 0px;
+    }
+
+    .bs-content {
+
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
 }
