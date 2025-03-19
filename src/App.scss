@@ -753,10 +753,41 @@ footer {
 
 // Media Queries
 @media (min-width:300px) and (max-width: 450px) {
+.close-bar{
+    display: none;
+}
     
-    body{
-        background-color: red;
+    //navbar
+    .active-bar {
+        background-image: linear-gradient(145deg, #03033a, #302e2e);
+        height: 280px;
+        padding: 20px;
+        border-radius: 12px;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        flex-direction: column;
+
+        a {
+            border-radius: 2px;
+        }
     }
+
+    .active-in-out {
+        position: absolute;
+        flex-direction: column;
+        top: 250px;
+        right: -60px;
+
+        button {
+            font-size: 1rem;
+            border: none;
+            border-radius: 2px;
+        }
+    }
+
+
+
     .menu {
         font-size: 1.5rem;
         border: none;
@@ -769,9 +800,10 @@ footer {
         text-align: center;
     }
 
-    .navtabs,
-    .in-out {
-        display: none;
+
+
+    .blog-read {
+        bottom: 20px;
     }
 
     .navbar {
@@ -780,7 +812,7 @@ footer {
     }
 
     .intro {
-        height: 50vh;
+        height: 60vh;
         padding: 10px 25px;
     }
 
@@ -795,35 +827,80 @@ footer {
 
     .intro-samples {
         flex-direction: column;
+        justify-content: center;
+        padding: 20px 20px;
+        background-color: #F5F5F7;
+        width: 100%;
     }
 
-    .blog-read {
-        padding: 2px 15px 4px;
-        bottom: 10px;
-        font-size: 1rem;
+    .trends {
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
+
 
     .trend-block {
-        width: 200px;
+        width: 280px;
         height: 150px;
-
-        h2 {
-            font-size: .4rem;
-        }
-    }
-
-
-    .trend-block {
-        width: 70px;
-        height: 50px;
 
         h2 {
             border-radius: 0px 0px 10px 10px;
             font-size: .7rem;
-            top: 140px;
+            top: 90px;
             left: 0px;
             height: fit-content;
         }
+    }
+
+    .blog-container {
+        padding: 20px;
+        grid-template-columns: 1fr;
+
+    }
+
+    .singleblog {
+        padding: 20px;
+    }
+
+    .bs-title {
+
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .bs-date {
+        margin-top: 10px;
+        font-size: .7rem;
+    }
+
+    .singleblog-container {
+        padding: 50px 20px 50px 20px;
+    }
+
+    .backto {
+        width: 90%;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .form,
+    .edit-form {
+
+        label,
+        textarea {
+            width: 300px;
+            font-size: .9rem;
+        }
+    }
+
+    .community {
+        margin: 20px;
+    }
+
+    //footer
+    footer {
+        font-size: .7rem;
     }
 }
 
@@ -875,15 +952,11 @@ footer {
     }
 
     .blog-read {
-
         bottom: 20px;
         font-size: .8rem;
     }
 
-    .intro-samples {
-        flex-direction: column;
-        padding: 20px 80px;
-    }
+
 
     .intro-samples {
         flex-direction: column;
@@ -895,9 +968,9 @@ footer {
         width: fit-content;
     }
 
-    .trend-block {
+    /*  .trend-block {
         padding: 10px 90px;
-    }
+    } */
 
     .trends {
         gap: 10px;
@@ -1028,7 +1101,6 @@ footer {
         font-size: .9rem;
     }
 }
-
 
 // Medium devices (tablets, 600px - 1024px)
 @media (min-width:978px) and (max-width: 1024px) {
