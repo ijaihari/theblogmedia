@@ -57,7 +57,7 @@ function Blogs() {
                         </section>
                     ))
                 ) : (
-                    <p>No blogs found for this category.</p>
+                    <p className="no-blogs">No blogs found for this category.</p>
                 )}
             </section>
         </div>

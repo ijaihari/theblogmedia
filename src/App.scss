@@ -6,6 +6,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
 }
 
 li {
@@ -17,7 +18,12 @@ a {
 }
 
 body {
+    width: 100%;
     position: relative;
+}
+
+button {
+    cursor: pointer;
 }
 
 .fixed {
@@ -28,7 +34,7 @@ body {
 }
 
 .header {
-    background-image: linear-gradient(145deg, rgb(3, 3, 58), #302e2e);
+    background-image: linear-gradient(145deg, #03033a, #302e2e);
 }
 
 
@@ -45,6 +51,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 7px 0px 9px 150px;
+
 }
 
 .navtabs {
@@ -108,10 +115,10 @@ body {
     font-size: 3rem;
     margin-top: 40px;
     margin-bottom: 17px;
-    /*  background: linear-gradient(145deg, #082974, #3f3d3d);
+    background: linear-gradient(145deg, #082974, #3f3d3d);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
     color: black;
 }
 
@@ -171,7 +178,6 @@ body {
     width: 380px;
     height: 200px;
     border-radius: 10px;
-
     background-size: cover;
     position: relative;
 
@@ -439,7 +445,7 @@ body {
 }
 
 .pub-date {
-    color: rgb(5, 5, 61);
+    color: #808080;
     font-size: .9rem;
     font-weight: 500;
     margin-bottom: 6px;
@@ -448,17 +454,17 @@ body {
 
 .b-summary {
     font-size: 1.1rem;
-    color: rgb(71, 71, 71);
+    color: #232222;
     margin-bottom: 5px;
 }
 
 .opento {
     position: absolute;
-    color: royalblue;
-    background-color: transparent;
-    border: 1px solid royalblue;
-    border-radius: 20px;
-    padding: 3px 15px 4px 15px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4px 10px 5px 10px;
     font-size: .9rem;
     font-weight: 500;
     bottom: 15px;
@@ -467,7 +473,7 @@ body {
 
     &:hover {
         color: white;
-        background-color: royalblue;
+        background-color: black;
     }
 }
 
@@ -475,16 +481,23 @@ body {
     font-size: .7rem;
     font-weight: 500;
     padding: 1px 7px;
-    border: 1px solid black;
+    border: 1px solid royalblue;
     border-radius: 10px;
     background-color: transparent;
-    color: black;
+    color: royalblue;
+}
+
+.no-blogs {
+    color: grey;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 250px;
 }
 
 //singleblog
 .singleblog {
-    min-height: 90vh;
-    max-height: fit-content;
+    min-height: 100vh;
     background-color: #F5F5F7;
     padding: 20px 150px;
 }
@@ -555,7 +568,10 @@ body {
 
 //write
 .write-container {
+    min-height: 100vh;
+
     h1 {
+        font-size: 1.6rem;
         text-align: center;
     }
 }
@@ -647,8 +663,7 @@ body {
 .write {
     display: flex;
     justify-content: center;
-    min-height: 81.4vh;
-    max-height: fit-content;
+    min-height: 100vh;
 }
 
 footer {
@@ -672,8 +687,9 @@ footer {
 
 //edit 
 .edit-blog-container {
-    min-height:87.5vh ;
-    h1{
+    min-height: 100vh;
+
+    h1 {
         text-align: center;
     }
 }
@@ -686,7 +702,7 @@ footer {
 
 //community
 .community {
-    min-height: 81.8vh;
+    min-height: 100vh;
     margin: 20px 150px;
 
     h2 {
@@ -736,11 +752,334 @@ footer {
 
 
 // Media Queries
+@media (min-width:300px) and (max-width: 450px) {
+    
+    body{
+        background-color: red;
+    }
+    .menu {
+        font-size: 1.5rem;
+        border: none;
+        background-color: transparent;
+        color: white;
+        display: block;
+    }
 
-// Small devices (phones, 600px and down)
+    .word-logo {
+        text-align: center;
+    }
+
+    .navtabs,
+    .in-out {
+        display: none;
+    }
+
+    .navbar {
+        font-size: 1rem;
+        padding: 3px 30px 3px 30px;
+    }
+
+    .intro {
+        height: 50vh;
+        padding: 10px 25px;
+    }
+
+    .intro-idea {
+        text-align: justify;
+        font-size: 1.4rem;
+    }
+
+    .intro-about {
+        font-size: .8rem;
+    }
+
+    .intro-samples {
+        flex-direction: column;
+    }
+
+    .blog-read {
+        padding: 2px 15px 4px;
+        bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .trend-block {
+        width: 200px;
+        height: 150px;
+
+        h2 {
+            font-size: .4rem;
+        }
+    }
+
+
+    .trend-block {
+        width: 70px;
+        height: 50px;
+
+        h2 {
+            border-radius: 0px 0px 10px 10px;
+            font-size: .7rem;
+            top: 140px;
+            left: 0px;
+            height: fit-content;
+        }
+    }
+}
+
+/* Extra Small Devices (Phones) */
+@media (min-width:601px) and (max-width: 977px) {
+
+    /* Styles for phones */
+    .menu {
+        border: none;
+        background-color: transparent;
+        color: white;
+        display: none;
+    }
+
+    .word-logo a {
+        font-size: 1.5rem;
+    }
+
+    .navbar {
+        font-size: .8rem;
+        padding: 3px 0px 4px 40px;
+    }
+
+    .navtabs {
+        gap: 10px;
+    }
+
+    .in-out {
+        margin-right: 40px;
+
+        button {
+            padding: 2px 6px 3px 6px;
+            font-size: .5rem;
+        }
+    }
+
+    .intro {
+        height: 45vh;
+        padding: 10px 40px;
+    }
+
+    .intro-idea {
+        font-size: 1.8rem;
+
+    }
+
+    .intro-about {
+        font-size: 1rem;
+    }
+
+    .blog-read {
+
+        bottom: 20px;
+        font-size: .8rem;
+    }
+
+    .intro-samples {
+        flex-direction: column;
+        padding: 20px 80px;
+    }
+
+    .intro-samples {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .trend-blog {
+        margin: 0px 80px;
+        width: fit-content;
+    }
+
+    .trend-block {
+        padding: 10px 90px;
+    }
+
+    .trends {
+        gap: 10px;
+
+    }
+
+    .trend-block {
+        width: 270px;
+        height: 200px;
+
+        h2 {
+            border-radius: 0px 0px 10px 10px;
+            font-size: .7rem;
+            top: 140px;
+            left: 0px;
+            height: fit-content;
+        }
+    }
+
+    .re-blog,
+    .sub-news {
+        margin: 0px 70px;
+    }
+
+    .sub-news {
+        margin-top: 15px;
+
+        button {
+            font-size: .9rem;
+        }
+    }
+
+    //blogs
+    .blog-container {
+        grid-template-columns: 160px 1fr;
+        gap: 10px;
+        padding: 20px 40px;
+    }
+
+    .active-category,
+    .cattag-btn {
+        font-size: .8rem;
+    }
+
+    .b-title {
+        font-size: 1.2rem;
+    }
+
+    .b-summary {
+        font-size: 1rem;
+    }
+
+    .opento {
+        font-size: .8rem;
+    }
+
+    //read
+    .singleblog {
+
+        padding: 20px 40px;
+    }
+
+    .singleblog-container {
+        padding: 20px;
+    }
+
+    .bs-title {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    .bs-content {
+        font-size: 1rem;
+    }
+
+    .backto {
+        font-size: .8rem;
+        bottom: 10px;
+        right: 20px;
+        padding: 5px 7px 6px;
+    }
+
+    //write
+
+    .form,
+    .edit-form {
+
+        label,
+        textarea {
+            width: 300px;
+            font-size: .9rem;
+        }
+
+        input {
+            padding: 3px 3px 5px;
+            font-size: .8rem;
+            margin-bottom: 2px;
+        }
+
+        select {
+            padding: 3px 3px 5px;
+            font-size: .8rem;
+        }
+
+        button {
+            font-size: .9rem;
+        }
+    }
+
+    //community
+
+    .community {
+        p {
+            font-size: .7rem;
+        }
+
+        .word {
+            font-size: 3rem;
+        }
+
+        ul {
+            font-size: .8rem;
+        }
+    }
+
+    //footer
+    footer {
+        font-size: .9rem;
+    }
+}
+
 
 // Medium devices (tablets, 600px - 1024px)
-@media (min-width: 601px) and (max-width: 1024px) {}
+@media (min-width:978px) and (max-width: 1024px) {
+    .word-logo a {
+        font-size: 1.7rem;
+    }
+
+    .navbar {
+        padding: 7px 0px 9px 80px;
+
+    }
+
+    .in-out {
+        margin-right: 80px;
+    }
+
+    //home
+    .intro-idea {
+        font-size: 2rem;
+    }
+
+    .intro-about,
+    .blog-read {
+        font-size: 1rem;
+    }
+
+    //intro
+    .intro-samples {
+        flex-direction: column;
+        padding: 20px 80px;
+    }
+
+    .recent-blog {
+        display: flex;
+        flex-direction: row;
+        gap: 3%;
+    }
+
+    .re-blog {
+        flex-basis: 50%;
+    }
+
+    .sub-news {
+        flex-basis: 50%;
+        margin-top: 0px;
+        height: fit-content;
+    }
+
+    //
+
+}
 
 // Large devices (desktops, 1024px - 1440px)
 @media (min-width: 1024px) and (max-width: 1430px) {

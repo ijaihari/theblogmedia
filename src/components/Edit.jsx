@@ -36,7 +36,7 @@ const Edit = () => {
 
     return (
         <div className="edit-blog-container">
-            <h1>Edit Blog</h1>
+            <h1>Edit blog</h1>
             <section className="edit-container">
                 <form className="edit-form" onSubmit={handleSubmit}>
                     <label htmlFor="title">Title </label><br />
