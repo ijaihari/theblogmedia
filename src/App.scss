@@ -753,10 +753,10 @@ footer {
 
 // Media Queries
 @media (min-width:300px) and (max-width: 450px) {
-.close-bar{
-    display: none;
-}
-    
+    .close-bar {
+        display: none;
+    }
+
     //navbar
     .active-bar {
         background-image: linear-gradient(145deg, #03033a, #302e2e);
