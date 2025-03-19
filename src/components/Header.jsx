@@ -5,7 +5,7 @@ function Header() {
     const navigate = useNavigate()
     const [Open, setOpen] = useState(false);
     function OpenClose() {
-        setOpen(!Open);
+        setOpen(!Open)
     }
 
     return (
