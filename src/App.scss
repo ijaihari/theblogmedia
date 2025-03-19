@@ -909,9 +909,6 @@ footer {
 
     /* Styles for phones */
     .menu {
-        border: none;
-        background-color: transparent;
-        color: white;
         display: none;
     }
 
@@ -1104,6 +1101,10 @@ footer {
 
 // Medium devices (tablets, 600px - 1024px)
 @media (min-width:978px) and (max-width: 1024px) {
+    .menu {
+        display: none;
+    }
+
     .word-logo a {
         font-size: 1.7rem;
     }
@@ -1155,6 +1156,9 @@ footer {
 
 // Large devices (desktops, 1024px - 1440px)
 @media (min-width: 1024px) and (max-width: 1430px) {
+    .menu {
+        display: none;
+    }
 
     //header
     .word-logo {
